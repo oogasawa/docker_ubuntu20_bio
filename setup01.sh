@@ -109,7 +109,8 @@ install_R_packages() {
 	# Install R packages
 	Rscript -e 'install.packages("ggplot2", repos="https://cran.ism.ac.jp")'
 	Rscript -e 'install.packages("gridextra", repos="https://cran.ism.ac.jp")'
-	# Rscript -e 'install.packages("rpy2", repos="https://cran.ism.ac.jp")'
+	Rscript -e 'install.packages("rlang", repos="https://cran.ism.ac.jp")'
+	Rscript -e 'install.packages("lazyeval", repos="https://cran.ism.ac.jp")'
 
 	pip install rpy2
 }
