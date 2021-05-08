@@ -122,6 +122,25 @@ install_biotools() {
 }
 
 
+install_tools() {
+	mkdir -p $HOME/local/src
+	cd $HOME/local/src
+	git clone https://github.com/oogasawa/docsify-util-ts
+	cd docsify-util-ts
+	npm run build
+	pkg .
+	cp docsify_util-linux $HOME/local/bin
+
+	cd $HOME/local/src
+	git clone https://github.com/oogasawa/ts_util
+	cd ts_util
+	npm run build
+	pkg .
+	cp ts_util-linux $HOME/local/bin
+
+}
+
+
 install_BioinformaticsWithPython2ndEd() {
 	git clone https://github.com/PacktPublishing/Bioinformatics-with-Python-Cookbook-Second-Edition.git
 }
@@ -140,6 +159,7 @@ function main {
 	install_R
 	install_R_packages
 	install_nodejs
+	install_tools
 	install_biotools
 	install_BioinformaticsWithPython2ndEd
 }
