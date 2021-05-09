@@ -6,4 +6,4 @@ bash setup_nodejs.sh
 bash setup_biotools.sh
 
 # bash setup_GraalVM.sh
-
+bash setup_Rust.sh

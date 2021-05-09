@@ -6,6 +6,6 @@ USER user01
 ENV LD_LIBRARY_PATH=$HOME/local/lib/R/lib:$LD_LIBRARY_PATH
 COPY setup01.sh $HOME
 COPY init_env.sh $HOME
-RUN bash setup01.sh
+RUN bash setup_all.sh
 
 
