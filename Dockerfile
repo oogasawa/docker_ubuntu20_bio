@@ -7,6 +7,7 @@ ENV LD_LIBRARY_PATH=$HOME/local/lib/R/lib:$LD_LIBRARY_PATH
 RUN  mkdir -p $HOME/local/src
 COPY setup*.sh $HOME/local/src/
 COPY init_env.sh $HOME
-RUN cd $HOME/local/src && ls && bash ./setup_all.sh
+WORKDIR $HOME/local/src
+RUN bash setup_all.sh
 
 
