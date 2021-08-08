@@ -1,4 +1,4 @@
-FROM oogasawa/singularity-in-docker:latest
+FROM oogasawa/singularity_in_docker:latest
 MAINTAINER Osamu Ogasawara <oogasawa@nig.ac.jp>
 
 USER user01
